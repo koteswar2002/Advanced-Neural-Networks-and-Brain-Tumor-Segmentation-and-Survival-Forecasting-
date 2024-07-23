@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Neural Networks for Brain Tumor Segmentation and Survival Forecasting</title>
+    <style>
+        body {
+            background-image: url('image.avif');
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Neural Networks for Brain Tumor Segmentation and Survival Forecasting</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept=".jpg, .jpeg, .png, .tif" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if output %}
+        <h2>Output</h2>
+        <img src="{{ url_for('output') }}" alt="Prediction Output">
+    {% endif %}
+</body>
+</html>
